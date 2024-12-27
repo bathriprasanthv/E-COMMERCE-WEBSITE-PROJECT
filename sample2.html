@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .products {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            margin: 1rem;
+            flex: 1 1 calc(33.333% - 2rem);
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .form-container {
+            display: none;
+            padding: 2rem;
+            border: 1px solid #ccc;
+            margin: 2rem;
+        }
+
+        .form-container input {
+            display: block;
+            margin: 1rem 0;
+            padding: 0.5rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E-COMMERCE PC COMPONENTS</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="products">
+            
+            <div class="product" id="AMD RYZEN 9 SERIES">
+                <h3>AMD RYZEN 9</h3>
+                <img src="https://m.media-amazon.com/images/I/41k-qInPV7L._SX300_SY300_QL70_FMwebp_.jpg" height="300px">
+                <p>AMD Ryzen 9 9900X Desktop Processor Zen 5 Architecture with Integrated Radeon Graphics, 12 cores 24 Threads 64 MB Cache, Base Clock 4.4GHz Upto 5.6GHz AM5 Socket, System Memory DDR5-100-100000662WOF</p>
+                <p>Price: &#8377 41,999</p>
+                <button onclick="addToCart('AMD RYZEN 9', 490.14)">Add to Cart</button>
+                <button onclick="buyNow('AMD RYZEN 9', 490.14)">Buy Now</button>
+            </div>
+            <div class="product" id="INTEL I9 14TH GEN">
+                <h3>INTEL I9 14TH GEN</h3>
+                <img src="https://m.media-amazon.com/images/I/61o3Qs1wbXL._SL1500_.jpg" height="300px">
+                <p>Intel Core I9-14900K LGA 1700 New Gaming Desktop Processor 24 Cores (8 P-Cores + 16 E-Cores) with Integrated Graphics - Unlocked</p>
+                <p>Price: &#8377 42,999</p>
+                <button onclick="addToCart('INTEL I9 14TH GEN', 510.94)">Add to Cart</button>
+                <button onclick="buyNow('INTEL I9 14TH GEN', 510.94)">Buy Now</button>
+            </div>
+            <div class="product" id="GEFORCE RTX 4090">
+                <h3>GEFORCE RTX 4090</h3>
+                <img src="https://m.media-amazon.com/images/I/816hhOe0gVL._SY450_.jpg" height="300px">
+                <p>MSI Geforce RTX 4090 Suprim X 24G Graphic Card I Nvidia Geforce RTX 4090 Gpu|24 Gb Gddr6X 384-Bit Memory,|21 Gbps Speed|Pci Express 4 Interface|Upto 2640 Mhz|Torx Fan 5.0,Tri Frozr 3S,pci_e</p>
+                <p>Price: &#8377 2,48,999</p>
+                <button onclick="addToCart('GEFORCE RTX 4090', 2916.53)">Add to Cart</button>
+                <button onclick="buyNow('GEFORCE RTX 4090', 2916.53)">Buy Now</button>
+            </div>
+            <div class="product" id="ASUS MOTHER BOARD">
+                <h3>ASUS MOTHER BOARD</h3>
+                <img src="https://m.media-amazon.com/images/I/814LJ0f3J6L._SY450_.jpg" height="300px">
+                <p>MSI X670E Gaming Plus WiFi Motherboard, ATX - Supports AMD Ryzen 7000 Series Processors, AM5, DDR5 Memory Boost 7800+MHz/OC, 3 x PCIe 5.0 x16, 1 x M.2 Gen5, Wi-Fi 6E</p>
+                <p>Price: &#8377 24,999</p>
+                <button onclick="addToCart('ASUS MOTHER BOARD', 292.81)">Add to Cart</button>
+                <button onclick="buyNow('ASUS MOTHER BOARD', 292.81)">Buy Now</button>
+            </div>
+            <div class="product" id="ASUS CABINET BLACK">
+                <h3>ASUS CABINET RGB </h3>
+                <img src="https://m.media-amazon.com/images/I/41T-2v3IuML._SX300_SY300_QL70_FMwebp_.jpg" height="300px">
+                <p>ASUS ROG Strix Helios GX601 White Edition RGB Mid-Tower Computer Case for ATX/EATX Motherboards with Tempered Glass, Aluminum Frame, GPU Braces, 420mm Radiator Support and Aura Sync (GX601/WT/AL/WITH HANDLE)</p>
+                <p>Price: &#8377 32,999 </p>
+                <button onclick="addToCart('ASUS CABINET BLACK',312.54 )">Add to Cart</button>
+                <button onclick="buyNow('ASUS CABINET BLACK',312.54 )">Buy Now</button>
+            </div><br>
+            <div class="product" id="SMPS 24BIT CONECTOR">
+                <h3>SMPS 24BIT CONECTOR</h3>
+                <img src="https://m.media-amazon.com/images/I/418O3V1TEkL._SX300_SY300_QL70_FMwebp_.jpg" height="300px">
+                <P>GIGABYTE GP-P450B 80 Plus Bronze Power Supply</P>
+                <p>Price: &#8377 2,999 </p>
+                <button onclick="addToCart('SMPS 24BIT CONECTOR',35.15 )">Add to Cart</button>
+                <button onclick="buyNow('SMPS 24BIT CONECTOR',35.15 )">Buy Now</button>
+            </div><br>
+            <div class="product" id="DDR5 RAM">
+                <h3>DDR5 RAM</h3>
+                <img src="https://m.media-amazon.com/images/I/51s7lQfcvRL._SX679_.jpg" height="300px">
+                <p>ADATA XPG Lancer RGB 16 GB (1 * 16 GB) DDR5 5200 MHz U-DIMM Desktop Memory RAM - AX5U5200C3816G-CLARWH (White)</p>
+                <p>Price: &#8377 4,999 </p>
+                <button onclick="addToCart('DDR5 RAM',58.53 )">Add to Cart</button>
+                <button onclick="buyNow('DDR5 RAM',58.53)">Buy Now</button>
+            </div>
+            <div class="product" id="SAMSUNG SSD 1TB">
+                <h3>SAMSUNG SSD 1TB</h3>
+                <img src="https://m.media-amazon.com/images/I/61xMrZtfxuL._SX679_.jpg" height="300px">
+                <P>Samsung 990 EVO SSD 1TB, PCIe 5.0 x2 M.2 2280, Speeds Up-to 5,000MB/s, Upgrade Storage for PC/Laptops, HMB Technology and Intelligent Turbowrite MZ-V9E1T0BW, Black</P>
+                <p>Price: &#8377 7,999 </p>
+                <button onclick="addToCart('SAMSUNG SSD 1TB',93.65 )">Add to Cart</button>
+                <button onclick="buyNow('SAMSUNG SSD 1TB',93.65)">Buy Now</button>
+            </div>
+            <div class="product" id="CURVED DISPLAY 4K">
+                <h3>CURVED MONITOR 4K</h3>
+                <img src="https://m.media-amazon.com/images/I/81+FFUY6lwL._SX679_.jpg" height="300px">
+                <p>Samsung 27-Inch(68.5cm) FHD, 1800R Curved 1,920 X 1,080 LED Monitor, VA Panel, Slim Design, AMD Freesync, Flicker Free, HDMI, Audio Port (LC27R500FHWXXL, Dark Blue Gray)</p>
+                <p>Price: &#8377 12,999 </p>
+                <button onclick="addToCart('CURVED MONITOR 4K',152.30 )">Add to Cart</button>
+                <button onclick="buyNow('CURVED MONITOR 4K',152.30)">Buy Now</button>
+            </div>
+            <div class="product" id="MECHANICAL KEYBOARD">
+                <h3>MECHANICAL KEYBOARD</h3>
+                <img src="https://m.media-amazon.com/images/I/71MMyY42UHL._SX679_.jpg" height="300px">
+                <p>Raze BlackWidow V3 - Mechanical Gaming Keyboard (Green Switch) - Quartz Edition - US Layout FRML Packaging</p>
+                <p>Price: &#8377 9,999</p>
+                <button onclick="addToCart('MECHANICAL KEYBOARD',117.07 )">Add to Cart</button>
+                <button onclick="buyNow('MECHANICAL KEYBOARD',117.07)">Buy Now</button>
+            </div>
+            <div class="product" id="ASUS GAMING MOUSE">
+                <h3>ASUS GAMING MOUSE</h3>
+                <img src="https://m.media-amazon.com/images/I/41FQYvZgT9L._SX300_SY300_QL70_FMwebp_.jpg" height="300px">
+                <P>ASUS ROG Spatha X Wireless Gaming Mouse (Magnetic Charging Stand, 12 Programmable Buttons, 19,000 DPI, Push-fit Hot Swap Switch Sockets, ROG Micro Switches, ROG Paracord and Aura RGB Lighting)</P>
+                <p>Price: &#8377 24,999 </p>
+                <button onclick="addToCart('ASUS GAMING MOUSE',292.81 )">Add to Cart</button>
+                <button onclick="buyNow('ASUS GAMING MOUSE',292.81)">Buy Now</button>
+            </div>
+            <div class="product" id="EXTERNAL COOLER">
+                <h3>EXTERNAL COOLER</h3>
+                <img src="https://m.media-amazon.com/images/I/71CkL1HxRmL._SX522_.jpg" height="300px">
+                <P>CORSAIR iCUE H170i Elite CAPELLIX XT Liquid CPU Cooler - AF140 RGB Elite Fans - 420mm Radiator - Intel LGA 1700, 1200, 115X, 2066, AMD® AM5, AM4</P>
+                <p>Price: &#8377 16,999</p>
+                <button onclick="addToCart('EXTERNAL COOLER',199.07 )">Add to Cart</button>
+                <button onclick="buyNow('EXTERNAL COOLER',199.07)">Buy Now</button>
+            </div>
+
+
+            <!-- Add more products as needed -->
+        </section>
+        <section class="form-container" id="checkout-form">
+            <h2>Checkout</h2>
+            <form>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <input type="text" id="credit-card" placeholder="Credit Card Number" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My E-commerce Store</p>
+    </footer>
+    <script>
+        function addToCart(product, price) {
+            alert(`${product} has been added to your cart at $${price}`);
+        }
+
+        function buyNow(product, price) {
+            document.getElementById('checkout-form').style.display = 'block';
+            alert(`Proceeding to buy ${product} at $${price}`);
+        }
+    </script>
+</body>
+</html>
